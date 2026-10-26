@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Anade la URL absoluta del sitemap cuando conectes el dominio final.

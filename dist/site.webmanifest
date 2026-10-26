@@ -1,0 +1,11 @@
+{
+  "name": "Transportes Huancas",
+  "short_name": "TransHuancas",
+  "description": "Transporte privado, ejecutivo y turistico en el Peru.",
+  "lang": "es-PE",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f3ed",
+  "theme_color": "#111512",
+  "icons": []
+}
