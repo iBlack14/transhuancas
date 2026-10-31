@@ -2,7 +2,7 @@
 
 1. Crea un servicio **App** y conecta este repositorio o sube el proyecto completo comprimido.
 2. En Build selecciona **Dockerfile**, ruta `Dockerfile`, contexto `.`.
-3. En Environment configura `SITE_URL=https://tu-dominio.pe` con el dominio definitivo, sin rutas. `PORT=3000` ya está definido en la imagen.
+3. En Environment configura `SITE_URL=https://tu-direccion-temporal` con el dominio temporal activo de EasyPanel, sin rutas. `PORT=3000` ya está definido en la imagen.
 4. En Domains agrega el dominio y dirige el tráfico al puerto interno **3000**, protocolo HTTP. Activa HTTPS en EasyPanel.
 5. Pulsa Deploy y verifica `/`, `/servicios/`, `/flota/`, `/nosotros/`, `/contacto/`, `/robots.txt` y `/sitemap.xml`.
 
@@ -24,3 +24,7 @@ Con Node 22 o superior: `npm run build` y `npm start`. Abre `http://localhost:30
 - Redirecciones permanentes para consolidar las versiones antiguas.
 
 Después de publicar, envía `https://tu-dominio.pe/sitemap.xml` a Google Search Console. La indexación depende de Google.
+
+## Dominio temporal y enfoque local
+
+El contenido está orientado a Transportes Huancas y consultas de viajes entre Piura, Chiclayo y Huarmaca. No publica salidas ni tarifas fijas. Usa el dominio temporal real en SITE_URL mientras esté activo. Cuando compres transporteshuancas.com, configura HTTPS, actualiza SITE_URL y establece redirecciones 301 desde el temporal conservando las rutas.
