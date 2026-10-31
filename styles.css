@@ -68,3 +68,18 @@ footer{grid-template-columns:minmax(290px,1.1fr) minmax(220px,.8fr) minmax(180px
 .btn:hover,.header-cta:hover,.search-btn:hover,.contact-form button:hover,.footer-whatsapp:hover{transform:translateY(-2px)}
 .btn-gold:hover,.contact-form .btn:hover{box-shadow:0 12px 26px #e31b2b3d;background:#cf1423}
 @media(max-width:680px){.btn{gap:12px;padding:11px 15px}.header-cta{padding:9px 12px}.contact-form .btn{width:auto;min-height:40px;padding:10px 14px}}
+
+/* Invitación animada de WhatsApp: ancho estable para evitar saltos al escribir. */
+.whatsapp-fab{position:relative;isolation:isolate;animation:waFabFloat 7s ease-in-out infinite}
+.whatsapp-fab::before{content:"";position:absolute;inset:-5px;border:1px solid #20b85a66;border-radius:inherit;z-index:-1;pointer-events:none;animation:waFabRing 7s ease-out infinite}
+.whatsapp-fab .wa-fab-label{display:inline-flex;align-items:center;width:143px;text-align:left;white-space:nowrap}
+.wa-fab-caret{display:none;width:2px;height:14px;margin-left:3px;background:currentColor;border-radius:1px}
+.wa-is-typing .wa-fab-caret{display:inline-block;animation:waCaret .7s step-end infinite}
+.whatsapp-widget.open .whatsapp-fab,.whatsapp-fab:hover,.whatsapp-fab:focus-visible{animation:none}
+.whatsapp-widget.open .whatsapp-fab::before,.whatsapp-fab:hover::before,.whatsapp-fab:focus-visible::before{animation:none;opacity:0}
+.whatsapp-fab:focus-visible{outline:3px solid #154b2a;outline-offset:5px}
+@keyframes waFabFloat{0%,72%,100%{transform:translateY(0)}80%{transform:translateY(-5px)}88%{transform:translateY(0)}94%{transform:translateY(-2px)}}
+@keyframes waFabRing{0%,70%{transform:scale(1);opacity:0}74%{opacity:.6}92%,100%{transform:scale(1.12,1.3);opacity:0}}
+@keyframes waCaret{50%{opacity:0}}
+@media(max-width:680px){.whatsapp-fab{width:auto;height:50px;padding:0 14px;gap:8px}.whatsapp-fab .wa-fab-label{display:inline-flex;width:132px;font-size:11px}.whatsapp-fab .wa-fab-text{display:inline}.whatsapp-fab .wa-fab-caret{display:none}.wa-is-typing .whatsapp-fab .wa-fab-caret{display:inline-block}}
+@media(prefers-reduced-motion:reduce){.whatsapp-fab,.whatsapp-fab::before,.wa-is-typing .wa-fab-caret,.wa-step-card{animation:none}.whatsapp-fab::before{display:none}.whatsapp-panel{transition:none}}

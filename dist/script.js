@@ -242,7 +242,7 @@ document.addEventListener('click', event => { if (!input.parentElement.contains(
       </div>
     </div>
     <button class="whatsapp-fab" type="button" aria-expanded="false" aria-controls="whatsapp-panel" aria-label="Consultar por WhatsApp">
-      <img src="/assets/whatsapp.svg" alt=""><span>¿Necesitas ayuda?</span>
+      <img src="/assets/whatsapp.svg" alt=""><span class="wa-fab-label" aria-hidden="true"><span class="wa-fab-text">¿Necesitas ayuda?</span><span class="wa-fab-caret"></span></span>
     </button>`;
   document.body.appendChild(widget);
 
@@ -250,6 +250,41 @@ document.addEventListener('click', event => { if (!input.parentElement.contains(
   const trigger = widget.querySelector('.whatsapp-fab');
   const close = widget.querySelector('.whatsapp-close');
   const container = widget.querySelector('#wa-step-container');
+  const fabText = widget.querySelector('.wa-fab-text');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const prompts = ['¿Necesitas ayuda?', '¿Viajas a Piura?', '¿Vamos a Chiclayo?', '¿Rumbo a Huarmaca?', 'Cotiza tu viaje aquí'];
+  let promptIndex = 0;
+  let animationTimer;
+  let animationPaused = false;
+  const stopPrompt = () => {
+    clearTimeout(animationTimer);
+    widget.classList.remove('wa-is-typing');
+    fabText.textContent = prompts[promptIndex];
+  };
+  const animatePrompt = () => {
+    stopPrompt();
+    if (reducedMotion.matches || document.hidden || animationPaused || widget.classList.contains('open')) return;
+    animationTimer = setTimeout(() => {
+      promptIndex = (promptIndex + 1) % prompts.length;
+      const message = Array.from(prompts[promptIndex]);
+      let position = 0;
+      widget.classList.add('wa-is-typing');
+      fabText.textContent = '';
+      const typeNext = () => {
+        fabText.textContent = message.slice(0, ++position).join('');
+        if (position < message.length) animationTimer = setTimeout(typeNext, 65);
+        else animatePrompt();
+      };
+      typeNext();
+    }, 4200);
+  };
+  trigger.addEventListener('pointerenter', () => { animationPaused = true; stopPrompt(); });
+  trigger.addEventListener('pointerleave', () => { animationPaused = false; animatePrompt(); });
+  trigger.addEventListener('focus', stopPrompt);
+  trigger.addEventListener('blur', animatePrompt);
+  document.addEventListener('visibilitychange', animatePrompt);
+  reducedMotion.addEventListener('change', animatePrompt);
+  animatePrompt();
 
   const state = {
     step: 0,
@@ -408,6 +443,7 @@ document.addEventListener('click', event => { if (!input.parentElement.contains(
     widget.classList.toggle('open', open);
     panel.setAttribute('aria-hidden', String(!open));
     trigger.setAttribute('aria-expanded', String(open));
+    animatePrompt();
     if (open) {
       if (!initialized) {
         initialized = true;
