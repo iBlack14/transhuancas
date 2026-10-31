@@ -1,0 +1,21 @@
+{
+  "slug": "turismo-privado",
+  "verified": false,
+  "title": "Turismo privado | Transportes Huancas",
+  "h1": "Consulta de turismo privado",
+  "description": "Borrador pendiente de confirmar traslados turísticos privados y cobertura.",
+  "sections": [
+    {
+      "title": "Preparar una consulta de movilidad turística",
+      "paragraphs": [
+        "Indicar los lugares que se desean visitar, fechas y cantidad de viajeros. Distinguir si se solicita solamente movilidad o si se buscan otros servicios."
+      ]
+    },
+    {
+      "title": "Confirmaciones pendientes",
+      "paragraphs": [
+        "Validar que la empresa ofrece turismo privado. No presentar paquetes, guías, entradas, alojamientos ni excursiones como incluidos sin confirmación."
+      ]
+    }
+  ]
+}

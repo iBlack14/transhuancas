@@ -1,0 +1,21 @@
+{
+  "slug": "transporte-ejecutivo",
+  "verified": false,
+  "title": "Transporte ejecutivo | Transportes Huancas",
+  "h1": "Consulta de transporte ejecutivo",
+  "description": "Borrador pendiente de confirmar el servicio ejecutivo, su cobertura y modalidad.",
+  "sections": [
+    {
+      "title": "Datos para coordinar un traslado de trabajo",
+      "paragraphs": [
+        "Indicar fecha, origen, destino y número de personas. Si se requieren varias paradas o un regreso, describir cada tramo por separado."
+      ]
+    },
+    {
+      "title": "Confirmaciones pendientes",
+      "paragraphs": [
+        "Validar si se ofrece este servicio, la cobertura, las unidades disponibles y las condiciones antes de publicar. No afirmar facturación, atención corporativa o equipamiento sin verificar."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "chiclayo-huarmaca",
+  "verified": true,
+  "title": "Viajes de Chiclayo a Huarmaca | Transportes Huancas",
+  "description": "Consulta tu viaje de Chiclayo a Huarmaca o de regreso. Transportes Huancas te informa por WhatsApp sobre disponibilidad, recojos y modalidad.",
+  "h1": "Viajes de Chiclayo a Huarmaca",
+  "intro": "Consulta tu salida desde Chiclayo hacia Huarmaca o el trayecto de regreso. Si estás cerca de la ruta, comparte tu ubicación para revisar un posible punto de encuentro.",
+  "message": "Hola Transportes Huancas, deseo consultar un viaje entre Chiclayo y Huarmaca. Fecha: __. Ubicación para subir o bajar: __. Pasajeros y equipaje: __. ¿Hay disponibilidad y qué modalidad ofrecen?",
+  "sections": [
+    {
+      "title": "Chiclayo y el acceso hacia Huarmaca",
+      "paragraphs": [
+        "La conexión vial de Huarmaca con Hualapampa enlaza con el corredor hacia Olmos y Chiclayo. Son referencias para ubicar el acceso, no una lista de paraderos ni una promesa de que la unidad entre al centro de cada localidad.",
+        "Al consultar desde Chiclayo, indica el punto donde te encuentras y si tu llegada será a Huarmaca o a una localidad cercana. Para el sentido Huarmaca–Chiclayo, señala también dónde necesitas bajar. La coordinación se realiza antes de confirmar el viaje."
+      ]
+    },
+    {
+      "title": "Consultas desde Olmos, Hualapampa o alrededores",
+      "paragraphs": [
+        "Si estás en Olmos, Hualapampa o cerca del acceso, envía un pin de tu ubicación y una referencia fácil de reconocer. Pregunta si el recorrido previsto permite que subas o bajes en un punto acordado.",
+        "Que una localidad esté conectada por carretera no confirma un recojo. El equipo debe revisar tu fecha, el trayecto y el acceso al punto propuesto. Espera esa respuesta antes de trasladarte a un cruce o lugar de encuentro."
+      ],
+      "links": [
+        {
+          "url": "https://portal.mtc.gob.pe/transportes/caminos/normas_carreteras/Mapas%20Distritales/Piura/PI_200304%20HUARMACA.pdf",
+          "label": "Mapa vial de Huarmaca (MTC)"
+        }
+      ]
+    },
+    {
+      "title": "Pasajes, reservas y regreso: qué preguntar",
+      "paragraphs": [
+        "Puedes preguntar por pasajes o reservas sin elegir una modalidad de antemano. Comparte cuántas personas viajarán y el equipaje; Transportes Huancas te indicará qué opción está disponible para esa solicitud. La tarifa y el horario se confirman por WhatsApp.",
+        "Si planificas volver, consulta la otra fecha y sentido de viaje de forma explícita. Si todavía no tienes una fecha definitiva, puedes pedir información, pero la consulta por sí sola no asegura disponibilidad ni confirma una reserva."
+      ],
+      "links": [
+        {
+          "url": "/contacto/",
+          "label": "Consultar disponibilidad por mi ubicación"
+        },
+        {
+          "url": "/piura-huarmaca/",
+          "label": "Consultar Piura–Huarmaca"
+        },
+        {
+          "url": "/piura-chiclayo/",
+          "label": "Consultar Piura–Chiclayo"
+        }
+      ]
+    }
+  ]
+}

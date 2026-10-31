@@ -1,0 +1,46 @@
+{
+  "slug": "piura-chiclayo",
+  "verified": true,
+  "title": "Viajes de Piura a Chiclayo | Transportes Huancas",
+  "description": "Consulta viajes de Piura a Chiclayo y de regreso con Transportes Huancas. Pregunta por pasajes, reservas y recojos cercanos a tu ubicación.",
+  "h1": "Viajes de Piura a Chiclayo",
+  "intro": "¿Necesitas viajar entre Piura y Chiclayo? Consulta con Transportes Huancas la disponibilidad para tu fecha y coordina el punto de encuentro antes de salir.",
+  "message": "Hola Transportes Huancas, quiero consultar un viaje entre Piura y Chiclayo. Mi fecha es: __. Mi ubicación de recojo es: __. Viajamos __ personas. ¿Qué opciones de pasaje o reserva hay?",
+  "sections": [
+    {
+      "title": "De Piura a Chiclayo y de Chiclayo a Piura",
+      "paragraphs": [
+        "Indica en qué ciudad inicia tu viaje y a cuál necesitas llegar. La consulta también puede ser para el regreso: la disponibilidad de un sentido no confirma automáticamente la del otro. Si tienes una cita o conexión al llegar, coméntalo al solicitar información.",
+        "Para consultar por un pasaje o una reserva, comparte la fecha, el número de personas y el equipaje que llevarán. Nuestro equipo te indicará la modalidad disponible y los detalles que debes confirmar; enviar una consulta no equivale a una reserva confirmada."
+      ]
+    },
+    {
+      "title": "¿Estás cerca del recorrido?",
+      "paragraphs": [
+        "La Panamericana Norte conecta el corredor costero de Piura y Lambayeque. Mórrope es una referencia geográfica de esa vía, pero no se anuncia como una parada fija de Transportes Huancas.",
+        "Si vives en una localidad cercana, envía por WhatsApp el nombre del lugar y un enlace o pin del mapa. Pregunta si el recorrido previsto permite un recojo o descenso allí. El equipo debe confirmar el punto exacto, el acceso y la disponibilidad antes de que te desplaces."
+      ]
+    },
+    {
+      "title": "Qué confirmar antes de viajar",
+      "paragraphs": [
+        "Solicita la tarifa para tu trayecto concreto, el lugar de salida, la hora acordada y las condiciones del equipaje. Si viajas con más personas, consulta si hay disponibilidad para todas en la misma fecha.",
+        "Para el regreso desde Chiclayo, vuelve a indicar el destino y tu ubicación. Si necesitas modificar algún dato después de coordinar, comunícalo por el mismo canal para que puedan revisar tu solicitud."
+      ],
+      "links": [
+        {
+          "url": "/contacto/",
+          "label": "Enviar los datos de mi viaje"
+        },
+        {
+          "url": "/piura-huarmaca/",
+          "label": "Consultar Piura–Huarmaca"
+        },
+        {
+          "url": "/chiclayo-huarmaca/",
+          "label": "Consultar Chiclayo–Huarmaca"
+        }
+      ]
+    }
+  ]
+}

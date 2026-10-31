@@ -21,9 +21,17 @@ const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 const fleet = {
-  sedan:{name:'Servicio urbano',capacity:15,luggage:12,image:'/fotos/editadas/1-profesional.webp',number:'01'},
-  suv:{name:'Ruta andina',capacity:15,luggage:12,image:'/fotos/editadas/2-profesional.webp',number:'02'},
-  van:{name:'Toyota Hiace TransHuancas',capacity:15,luggage:12,image:'/fotos/editadas/4-profesional.webp',number:'03'}
+  sedan:{name:'Servicio urbano',capacity:15,luggage:12,image:'/fotos/editadas/1-profesional.webp',width:1672,height:941,number:'01'},
+  suv:{name:'Ruta andina',capacity:15,luggage:12,image:'/fotos/editadas/2-profesional.webp',width:1898,height:829,number:'02'},
+  van:{name:'Toyota Hiace TransHuancas',capacity:15,luggage:12,image:'/fotos/editadas/4-profesional.webp',width:1898,height:829,number:'03'}
+};
+const applyFleetImage = (img, item) => {
+  const base = item.image.replace('.webp', '');
+  img.srcset = `${base}-640.webp 640w, ${base}-960.webp 960w, ${item.image} ${item.width}w`;
+  img.src = item.image;
+  img.width = item.width;
+  img.height = item.height;
+  img.alt = item.name;
 };
 const fleetButtons = document.querySelectorAll('.fleet-tabs button');
 if (fleetButtons.length === 3) {
@@ -32,8 +40,7 @@ if (fleetButtons.length === 3) {
   fleetButtons[2].textContent = 'Van para grupos';
   const initialFleetImage = document.querySelector('#fleet-image');
   if (initialFleetImage) {
-    initialFleetImage.src = fleet.sedan.image;
-    initialFleetImage.alt = fleet.sedan.name;
+    applyFleetImage(initialFleetImage, fleet.sedan);
   }
   document.querySelector('#fleet-name').textContent = fleet.sedan.name;
   document.querySelector('#capacity').textContent = fleet.sedan.capacity;
@@ -42,7 +49,7 @@ if (fleetButtons.length === 3) {
 document.querySelectorAll('.fleet-tabs button').forEach(btn => btn.addEventListener('click', () => {
   document.querySelector('.fleet-tabs .active')?.classList.remove('active'); btn.classList.add('active');
   const item=fleet[btn.dataset.fleet], img=document.querySelector('#fleet-image'); img.style.opacity=0;
-  setTimeout(()=>{img.src=item.image;img.alt=item.name;img.style.opacity=1},220);
+  setTimeout(()=>{applyFleetImage(img,item);img.style.opacity=1},220);
   document.querySelector('#fleet-name').textContent=item.name; document.querySelector('#capacity').textContent=item.capacity;
   document.querySelector('#luggage').textContent=item.luggage; document.querySelector('.fleet-number').textContent=item.number;
 }));
@@ -155,13 +162,16 @@ document.querySelectorAll('input[name="pasajeros"][type="number"]').forEach(inpu
 });
 
 const placeCache = new Map();
-document.querySelectorAll('input[name="origen"], input[name="destino"]').forEach(input => {
+document.querySelectorAll('input[name="origen"], input[name="destino"]').forEach((input, index) => {
   input.setAttribute('autocomplete','off');
   input.setAttribute('role','combobox');
   input.setAttribute('aria-autocomplete','list');
   const box = document.createElement('div');
   box.className = 'place-suggestions';
   box.setAttribute('role','listbox');
+  box.id = `place-suggestions-${index}`;
+  input.setAttribute('aria-controls', box.id);
+  input.setAttribute('aria-expanded', 'false');
   input.parentElement.classList.add('place-field');
   input.parentElement.appendChild(box);
   let timer, controller, active = -1;
@@ -227,7 +237,7 @@ document.addEventListener('click', event => { if (!input.parentElement.contains(
       <div class="whatsapp-panel-head">
         <span class="whatsapp-avatar"><img src="/assets/whatsapp.svg" alt="WhatsApp"></span>
         <div class="whatsapp-head-brand">
-          <img class="whatsapp-head-logo" src="/assets/logo-huancas-blanco.png" alt="Transp. Huancas">
+          <img class="whatsapp-head-logo" src="/assets/logo-huancas-blanco-640.webp" width="2172" height="724" decoding="async" alt="Transp. Huancas">
           <div class="wa-step-dots" id="wa-step-dots">
             <span class="dot active"></span>
             <span class="dot"></span>
@@ -260,18 +270,21 @@ document.addEventListener('click', event => { if (!input.parentElement.contains(
     clearTimeout(animationTimer);
     widget.classList.remove('wa-is-typing');
     fabText.textContent = prompts[promptIndex];
+    trigger.setAttribute('aria-label', `${prompts[promptIndex]} Consultar por WhatsApp`);
   };
   const animatePrompt = () => {
     stopPrompt();
-    if (reducedMotion.matches || document.hidden || animationPaused || widget.classList.contains('open')) return;
+    if (reducedMotion.matches || document.hidden || animationPaused || document.activeElement === trigger || widget.classList.contains('open')) return;
     animationTimer = setTimeout(() => {
       promptIndex = (promptIndex + 1) % prompts.length;
+      trigger.setAttribute('aria-label', `${prompts[promptIndex]} Consultar por WhatsApp`);
       const message = Array.from(prompts[promptIndex]);
       let position = 0;
       widget.classList.add('wa-is-typing');
       fabText.textContent = '';
       const typeNext = () => {
         fabText.textContent = message.slice(0, ++position).join('');
+        trigger.setAttribute('aria-label', `${fabText.textContent} Consultar por WhatsApp`);
         if (position < message.length) animationTimer = setTimeout(typeNext, 65);
         else animatePrompt();
       };

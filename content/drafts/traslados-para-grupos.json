@@ -1,0 +1,21 @@
+{
+  "slug": "traslados-para-grupos",
+  "verified": false,
+  "title": "Traslados para grupos | Transportes Huancas",
+  "h1": "Consulta de traslados para grupos",
+  "description": "Borrador pendiente de confirmar el servicio para grupos y capacidad disponible.",
+  "sections": [
+    {
+      "title": "Organizar la información del grupo",
+      "paragraphs": [
+        "Reunir el número de viajeros, los puntos de salida y llegada, fechas y equipaje. Si el grupo tiene distintos lugares de recojo, enumerarlos para evaluar la coordinación."
+      ]
+    },
+    {
+      "title": "Confirmaciones pendientes",
+      "paragraphs": [
+        "Verificar que se ofrece esta modalidad, capacidad de las unidades y disponibilidad conjunta. No prometer una unidad exclusiva, capacidad fija ni múltiples vehículos sin confirmación."
+      ]
+    }
+  ]
+}

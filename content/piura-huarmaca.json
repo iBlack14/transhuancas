@@ -1,0 +1,52 @@
+{
+  "slug": "piura-huarmaca",
+  "verified": true,
+  "title": "Viajes de Piura a Huarmaca | Transportes Huancas",
+  "description": "Viajes entre Piura y Huarmaca con Transportes Huancas. Consulta disponibilidad, pasajes o reservas y posibles recojos según tu ubicación.",
+  "h1": "Viajes de Piura a Huarmaca",
+  "intro": "Coordina tu viaje desde Piura hacia Huarmaca o consulta el regreso. Comparte tu fecha y la ubicación donde necesitas subir o bajar para revisar las opciones.",
+  "message": "Hola Transportes Huancas, quiero consultar un viaje entre Piura y Huarmaca. Fecha: __. Punto de recojo o ubicación en el mapa: __. Pasajeros: __. ¿Pueden confirmar modalidad, disponibilidad y tarifa?",
+  "sections": [
+    {
+      "title": "Una consulta según tu origen y destino exactos",
+      "paragraphs": [
+        "Huarmaca pertenece a la provincia de Huancabamba, en Piura. Si tu destino es un caserío o un punto cercano, escribe su nombre completo al consultar: decir solamente Huarmaca puede no ser suficiente para acordar dónde necesitas llegar.",
+        "También puedes consultar desde Huarmaca hacia la ciudad de Piura. Indica por separado la fecha de ida y la de vuelta para que el equipo revise cada trayecto. La modalidad de pasaje o reserva, la tarifa y el horario se confirman directamente por WhatsApp."
+      ]
+    },
+    {
+      "title": "Referencias de acceso a Huarmaca",
+      "paragraphs": [
+        "El mapa vial del MTC y la Municipalidad de Huarmaca documentan la conexión entre Huarmaca y Hualapampa. Esa referencia ayuda a ubicar la zona; no establece cuál será el itinerario concreto de tu viaje desde Piura.",
+        "Si estás cerca de Hualapampa u otra localidad del acceso a Huarmaca, manda tu ubicación y pregunta si es posible coordinar allí el recojo. No se garantiza el paso por una localidad ni el ingreso hasta una vivienda: el equipo confirma el recorrido y el punto de encuentro para cada consulta."
+      ],
+      "links": [
+        {
+          "url": "https://portal.mtc.gob.pe/transportes/caminos/normas_carreteras/Mapas%20Distritales/Piura/PI_200304%20HUARMACA.pdf",
+          "label": "Mapa vial de Huarmaca (MTC)"
+        }
+      ]
+    },
+    {
+      "title": "Prepara los detalles de tu viaje",
+      "paragraphs": [
+        "Especifica cuántas personas viajarán y si llevan maletas, bultos u otro equipaje. Si necesitas llegar a una hora determinada, indícala para que puedan evaluar la coordinación antes de confirmar.",
+        "Pide que te confirmen el lugar de salida y de llegada, la tarifa aplicable y la modalidad disponible. Guarda la conversación con los datos acordados y avisa si cambia tu fecha o ubicación. No se publican tiempos de viaje ni frecuencias sin confirmación."
+      ],
+      "links": [
+        {
+          "url": "/contacto/",
+          "label": "Consultar mi punto de recojo"
+        },
+        {
+          "url": "/chiclayo-huarmaca/",
+          "label": "Viajar desde Chiclayo a Huarmaca"
+        },
+        {
+          "url": "/piura-chiclayo/",
+          "label": "Viajes entre Piura y Chiclayo"
+        }
+      ]
+    }
+  ]
+}
