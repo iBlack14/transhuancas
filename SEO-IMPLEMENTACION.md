@@ -87,3 +87,9 @@ Docker no está instalado en el equipo, por lo que no se afirma haber construido
 Se revisaron las ocho páginas en anchos de 360, 390, 768 y 1280 píxeles. Los títulos largos introducidos para SEO desbordaban el espacio previsto: Servicios en móvil y Nosotros en escritorio podían empezar bajo la cabecera. Se ajustó la escala de H1, el ancho del contenido y el espacio superior de las portadas para acomodar los textos. En móvil se moderó el espaciado de H2. La foto de experiencia reserva su proporción antes de cargar.
 
 Las comprobaciones de 32 combinaciones de ruta y ancho no detectaron desbordamiento horizontal ni superposición de las portadas con la cabecera o las estadísticas. Se añadieron versiones a las URLs de CSS/JS para evitar mezclas con archivos antiguos en caché. El SEO, las ocho rutas, las cotizaciones y WhatsApp se conservan.
+
+## Botones y tarjetas
+
+Las tarjetas de rutas y servicios incorporan botones explícitos de WhatsApp y detalles, con al menos 44 píxeles de altura, foco visible y navegación con enlaces HTML. El fondo de las tarjetas abre los detalles y el botón de WhatsApp conserva su destino independiente. Los títulos enlazados mantienen la tipografía del encabezado, sin heredar el formato de enlaces pequeños. La sección final de contacto utiliza clases propias para separar teléfono, consulta por WhatsApp, formulario y rutas, evitando los estilos de rejilla del pie de página.
+
+Se comprobaron 16 botones de la portada a 390 y 1280 píxeles: sin desbordes, altura táctil adecuada y destinos independientes correctos en imagen/tarjeta y WhatsApp. Las pruebas de SEO de las ocho páginas siguen pasando.

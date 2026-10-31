@@ -131,3 +131,44 @@ footer{grid-template-columns:minmax(290px,1.1fr) minmax(220px,.8fr) minmax(180px
 @media(max-width:1000px){.hero .hero-content{max-width:680px}.page-hero{min-height:540px;padding-top:140px;padding-bottom:55px}}
 @media(max-width:680px){.hero .hero-content{left:6vw;right:6vw;max-width:none}.hero .hero-content h1{font-size:clamp(40px,11.5vw,52px);line-height:1.05;letter-spacing:-1.8px}.page-hero{min-height:540px;padding-top:125px;padding-bottom:55px}.page-hero h1{font-size:clamp(38px,11vw,48px);line-height:1.06;letter-spacing:-1.6px}.contact-intro h1{font-size:clamp(38px,10.5vw,46px);line-height:1.08;letter-spacing:-1.5px}}
 @media(max-width:680px){h2{letter-spacing:-1.5px;line-height:1.08}}
+
+/* Acciones legibles y tarjetas accesibles con navegación nativa. */
+.service-card{position:relative;isolation:isolate;border:1px solid #e8e2e3;transition:box-shadow .2s,border-color .2s,transform .2s}
+.service-card:hover{border-color:#dfafb5;box-shadow:0 12px 32px #4a101812;transform:translateY(-3px)}
+.service-card:focus-within{outline:2px solid #c61727;outline-offset:4px}
+.service-card .service-body>div{flex:1;min-width:0}
+.service-card .service-body h3,.service-card .service-body h3 a{font:700 21px/1.3 var(--display);letter-spacing:-.4px;text-transform:none;color:var(--ink)}
+.service-card .service-body h3 a{position:relative;z-index:2}
+.service-card .service-body p{font-size:14px;line-height:1.7}
+.service-card .card-actions{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin-top:22px}
+.service-card .card-actions .card-action{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 15px;border:1px solid transparent;border-radius:10px;font:700 12px/1.4 var(--body);letter-spacing:0;text-transform:none;text-align:center;text-decoration:none}
+.service-card .card-actions .card-action-primary{position:relative;z-index:2;background:#c91628;border-color:#c91628;color:#fff}
+.service-card .card-actions .card-action-primary img{flex-shrink:0;width:18px;height:18px}
+.service-card .card-actions .card-action-primary:hover{background:#a90f20;border-color:#a90f20}
+.service-card .card-actions .card-action-details{background:#fff;border-color:#dcd3d5;color:#34282a}
+.service-card .card-action-details::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}
+.service-card .card-action-details:hover{border-color:#c91628;color:#b21122}
+.service-card .card-action:focus-visible{outline:3px solid #241d1e;outline-offset:3px}
+#rutas .service-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+#rutas .service-card .service-body{height:100%}
+#rutas .service-card .service-body>div{display:flex;flex-direction:column}
+#rutas .service-card .card-actions{margin-top:auto;padding-top:20px;flex-direction:column}
+#rutas .service-card .card-action{width:100%}
+.cta{height:auto;min-height:620px;padding-top:80px;padding-bottom:80px}
+.cta-content{width:min(100%,760px)}
+.cta-content>p:not(.eyebrow){max-width:520px;font-size:16px;line-height:1.7}
+.trip-contact{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin-top:26px}
+.trip-contact>span{font-size:12px;font-weight:600;color:#f2e0e3}
+.trip-contact .trip-phone{font:700 25px/1.3 var(--display);letter-spacing:-.5px;color:#fff}
+.trip-contact small{font-size:12px;color:#f2e0e3}
+.trip-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.trip-actions .trip-action{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:13px 20px;border:1px solid transparent;border-radius:11px;font:700 14px/1.4 var(--body);text-align:center;transition:background .2s,transform .2s}
+.trip-action-primary{background:#c91628;color:#fff}
+.trip-action-primary:hover{background:#a90f20;transform:translateY(-2px)}
+.trip-actions .trip-action-secondary{background:#19060b80;border-color:#ffffff80;color:#fff}
+.trip-action-secondary:hover{background:#fff;color:#351119}
+.trip-routes{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:13px;line-height:1.6;color:#fff;text-decoration:underline;text-underline-offset:5px}
+.trip-action:focus-visible,.trip-routes:focus-visible,.trip-phone:focus-visible{outline:3px solid #fff;outline-offset:5px}
+@media(max-width:1000px){#rutas .service-grid{grid-template-columns:1fr}}
+@media(max-width:680px){.service-card .service-body{padding:24px;gap:14px}.service-card .service-body h3,.service-card .service-body h3 a{font-size:20px}.service-card .card-actions{flex-direction:column}.service-card .card-actions .card-action{width:100%;font-size:13px}.cta{min-height:0;padding-top:64px;padding-bottom:76px}.trip-actions{flex-direction:column;align-items:stretch}.trip-actions .trip-action{width:100%;font-size:14px}.trip-contact .trip-phone{font-size:24px}.trip-routes{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.service-card,.trip-action{transition:none}.service-card:hover,.trip-action-primary:hover{transform:none}}
