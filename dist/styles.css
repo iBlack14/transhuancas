@@ -120,3 +120,14 @@ footer{grid-template-columns:minmax(290px,1.1fr) minmax(220px,.8fr) minmax(180px
 .date-picker.open{z-index:1600}
 /* Misma composición con imágenes dimensionadas para pantallas pequeñas. */
 @media(max-width:680px){.hero{background-image:url("/fotos/editadas/1-profesional-960.webp")}.services-hero{background-image:url("/fotos/editadas/2-profesional-960.webp")}.fleet-page-hero{background-image:url("/fotos/editadas/7-profesional-960.webp")}.about-hero{background-image:url("/fotos/editadas/4-profesional-960.webp")}}
+
+/* Ajustes de encaje: los títulos SEO deben respetar la cabecera y los controles. */
+.hero .hero-content{right:6vw;max-width:760px}
+.hero .hero-content h1{font-size:clamp(48px,5.4vw,76px);line-height:1.04;letter-spacing:-2.5px}
+.page-hero{height:auto;min-height:620px;padding-top:160px;padding-bottom:85px}
+.page-hero h1{font-size:clamp(46px,5.4vw,76px);line-height:1.04;letter-spacing:-2.5px;overflow-wrap:break-word}
+.contact-intro h1{font-size:clamp(44px,4.7vw,66px);line-height:1.06;letter-spacing:-2px;overflow-wrap:break-word}
+.experience-image>img{aspect-ratio:auto 1088 / 1445}
+@media(max-width:1000px){.hero .hero-content{max-width:680px}.page-hero{min-height:540px;padding-top:140px;padding-bottom:55px}}
+@media(max-width:680px){.hero .hero-content{left:6vw;right:6vw;max-width:none}.hero .hero-content h1{font-size:clamp(40px,11.5vw,52px);line-height:1.05;letter-spacing:-1.8px}.page-hero{min-height:540px;padding-top:125px;padding-bottom:55px}.page-hero h1{font-size:clamp(38px,11vw,48px);line-height:1.06;letter-spacing:-1.6px}.contact-intro h1{font-size:clamp(38px,10.5vw,46px);line-height:1.08;letter-spacing:-1.5px}}
+@media(max-width:680px){h2{letter-spacing:-1.5px;line-height:1.08}}

@@ -81,3 +81,9 @@ En Chrome a 390 × 844 se comprobó el menú móvil, cierre con Escape y los cua
 Con JavaScript deshabilitado, el H1, el contenido de portada y los enlaces de rutas siguen disponibles y el contenido animado queda visible. Se revisaron capturas de la portada antes/después y de la nueva página Piura–Huarmaca en móvil.
 
 Docker no está instalado en el equipo, por lo que no se afirma haber construido o ejecutado la imagen localmente. La compilación y el arranque de Node sí se probaron; revisar el build de EasyPanel al publicar.
+
+## Corrección de encaje visual
+
+Se revisaron las ocho páginas en anchos de 360, 390, 768 y 1280 píxeles. Los títulos largos introducidos para SEO desbordaban el espacio previsto: Servicios en móvil y Nosotros en escritorio podían empezar bajo la cabecera. Se ajustó la escala de H1, el ancho del contenido y el espacio superior de las portadas para acomodar los textos. En móvil se moderó el espaciado de H2. La foto de experiencia reserva su proporción antes de cargar.
+
+Las comprobaciones de 32 combinaciones de ruta y ancho no detectaron desbordamiento horizontal ni superposición de las portadas con la cabecera o las estadísticas. Se añadieron versiones a las URLs de CSS/JS para evitar mezclas con archivos antiguos en caché. El SEO, las ocho rutas, las cotizaciones y WhatsApp se conservan.
