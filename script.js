@@ -1,16 +1,5 @@
 const menu = document.querySelector('.menu-btn');
 const header = document.querySelector('.site-header');
-const cleanRoutes = {
-  'index.html':'/', 'servicios.html':'/servicios/', 'flota.html':'/flota/',
-  'nosotros.html':'/nosotros/', 'contacto.html':'/contacto/', '#reserva':'/reservar/',
-  '#servicios':'/servicios/', '#flota':'/flota/', '#nosotros':'/nosotros/', '#contacto':'/contacto/'
-};
-document.querySelectorAll('a[href]').forEach(link => {
-  const href = link.getAttribute('href');
-  if (cleanRoutes[href]) link.setAttribute('href', cleanRoutes[href]);
-  if (href === '#inicio') link.setAttribute('href','/');
-});
-if (location.pathname.endsWith('/index.html')) history.replaceState(null,'',location.pathname.slice(0,-10) || '/');
 menu?.addEventListener('click', () => {
   const open = header.classList.toggle('open');
   menu.setAttribute('aria-expanded', open);
@@ -32,9 +21,9 @@ const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 const fleet = {
-  sedan:{name:'Servicio urbano',capacity:15,luggage:12,image:'fotos/editadas/1-profesional.webp',number:'01'},
-  suv:{name:'Ruta andina',capacity:15,luggage:12,image:'fotos/editadas/2-profesional.webp',number:'02'},
-  van:{name:'Toyota Hiace TransHuancas',capacity:15,luggage:12,image:'fotos/editadas/4-profesional.webp',number:'03'}
+  sedan:{name:'Servicio urbano',capacity:15,luggage:12,image:'/fotos/editadas/1-profesional.webp',number:'01'},
+  suv:{name:'Ruta andina',capacity:15,luggage:12,image:'/fotos/editadas/2-profesional.webp',number:'02'},
+  van:{name:'Toyota Hiace TransHuancas',capacity:15,luggage:12,image:'/fotos/editadas/4-profesional.webp',number:'03'}
 };
 const fleetButtons = document.querySelectorAll('.fleet-tabs button');
 if (fleetButtons.length === 3) {
@@ -236,9 +225,9 @@ document.addEventListener('click', event => { if (!input.parentElement.contains(
     <div class="whatsapp-panel whatsapp-compact-card" id="whatsapp-panel" aria-hidden="true">
       <button class="whatsapp-close" type="button" aria-label="Cerrar">×</button>
       <div class="whatsapp-panel-head">
-        <span class="whatsapp-avatar"><img src="assets/whatsapp.svg" alt="WhatsApp"></span>
+        <span class="whatsapp-avatar"><img src="/assets/whatsapp.svg" alt="WhatsApp"></span>
         <div class="whatsapp-head-brand">
-          <img class="whatsapp-head-logo" src="assets/logo-huancas-blanco.png" alt="Transp. Huancas">
+          <img class="whatsapp-head-logo" src="/assets/logo-huancas-blanco.png" alt="Transp. Huancas">
           <div class="wa-step-dots" id="wa-step-dots">
             <span class="dot active"></span>
             <span class="dot"></span>
@@ -253,7 +242,7 @@ document.addEventListener('click', event => { if (!input.parentElement.contains(
       </div>
     </div>
     <button class="whatsapp-fab" type="button" aria-expanded="false" aria-controls="whatsapp-panel" aria-label="Consultar por WhatsApp">
-      <img src="assets/whatsapp.svg" alt=""><span>¿Necesitas ayuda?</span>
+      <img src="/assets/whatsapp.svg" alt=""><span>¿Necesitas ayuda?</span>
     </button>`;
   document.body.appendChild(widget);
 
